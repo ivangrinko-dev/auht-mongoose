@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'DM Sans';
+    src: url(../../public/fonts/DMSans-Bold.ttf) format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url(../../public/fonts/DMSans_18pt-Regular.ttf) format('truetype'); 
+    font-weight: 400; 
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'DM Sans';
+    font-style: normal;
+}
+
+body {
+    width: 1200px;
+    overflow-x: hidden;
+    background: #F9F9F7;
+    margin: auto;
+}
