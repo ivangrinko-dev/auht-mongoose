@@ -5,7 +5,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { useState } from "react";
 import axios from "axios";
-import {useRouter} from 'next/router'
+import {useRouter} from 'next/navigation'
 
 export default function Reg() {
   const [input, setInput] = useState({
@@ -15,7 +15,7 @@ export default function Reg() {
     email: "",
     pwd: "",
   });
-
+const router = useRouter()
   function chengeInp(event) {
     setInput({ ...input, [event.target.name]: event.target.value });
   }
@@ -26,7 +26,7 @@ export default function Reg() {
     });
     console.log(result.data);
     console.log(input);
-    useRouter
+   router.push('/home')
   }
 
   return (
