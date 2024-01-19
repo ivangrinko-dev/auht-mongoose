@@ -4,6 +4,9 @@ const route = require("./controller/controller");
 const cookieParser = require('cookie-parser')
 const app = express();
 const cors = require("cors");
+const swagger = require("swagger-ui-express")
+const swaggerDocument = require("../swagger.json")
+
 
 app.use(cors({ origin: "http://localhost:3000", credentials: true }));
 app.use(cookieParser());
