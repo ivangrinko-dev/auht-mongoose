@@ -5,7 +5,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { useState } from "react";
 import axios from "axios";
-import {useRouter} from 'next/navigation'
+import { useRouter } from 'next/navigation'
 
 export default function Reg() {
   const [input, setInput] = useState({
@@ -15,7 +15,7 @@ export default function Reg() {
     email: "",
     pwd: "",
   });
-const router = useRouter()
+  const router = useRouter()
   function chengeInp(event) {
     setInput({ ...input, [event.target.name]: event.target.value });
   }
@@ -26,7 +26,7 @@ const router = useRouter()
     });
     console.log(result.data);
     console.log(input);
-   router.push('/home')
+    router.push('/home')
   }
 
   return (
@@ -34,45 +34,49 @@ const router = useRouter()
       <Header />
       <div className={style.wrapper}>
         <h1>Registration</h1>
-        <TextField
-          fullWidth
-          label="name"
-          id="fullWidth"
-          name="name"
-          onChange={chengeInp}
-        />
-        <TextField
-          fullWidth
-          label="surname"
-          id="fullWidth"
-          name="surname"
-          onChange={chengeInp}
-        />
-        <TextField
-          fullWidth
-          label="age"
-          id="fullWidth"
-          name="age"
-          onChange={chengeInp}
-        />
-        <TextField
-          fullWidth
-          label="email"
-          id="fullWidth"
-          name="email"
-          onChange={chengeInp}
-        />
-        <TextField
-          fullWidth
-          label="passowrd"
-          id="fullWidth"
-          name="pwd"
-          onChange={chengeInp}
-        />
-
+        <div className={style.wrapper_1}>
+          <div className={style.img}></div>
+          <div wrapper_>
+            <TextField className={style.inp}
+              fullWidth
+              label="name"
+              id="fullWidth"
+              name="name"
+              onChange={chengeInp}
+            />
+            <TextField className={style.inp}
+              fullWidth
+              label="surname"
+              id="fullWidth"
+              name="surname"
+              onChange={chengeInp}
+            />
+            <TextField className={style.inp}
+              fullWidth
+              label="age"
+              id="fullWidth"
+              name="age"
+              onChange={chengeInp}
+            />
+            <TextField className={style.inp}
+              fullWidth
+              label="email"
+              id="fullWidth"
+              name="email"
+              onChange={chengeInp}
+            />
+            <TextField className={style.inp}
+              fullWidth
+              label="passowrd"
+              id="fullWidth"
+              name="pwd"
+              onChange={chengeInp}
+            />
         <Button variant="outlined" onClick={createUser}>
           Sign Up
         </Button>
+          </div>
+        </div>
       </div>
     </div>
   );
