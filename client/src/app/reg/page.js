@@ -36,7 +36,7 @@ export default function Reg() {
         <h1>Registration</h1>
         <div className={style.wrapper_1}>
           <div className={style.img}></div>
-          <div wrapper_>
+          <div wrapper_2>
             <TextField className={style.inp}
               fullWidth
               label="name"
